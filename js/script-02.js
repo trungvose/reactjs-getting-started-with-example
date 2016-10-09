@@ -1,9 +1,11 @@
 //Button comp
 var Button = React.createClass({
+    //localHandleClick access to the property by this.props.localHandleClick by passing this.props.increment as argument
     localHandleClick: function(){
         this.props.localHandleClick(this.props.increment)
     },
     render: function () {
+        //access the localHandleClick defined inside this component
         return (
             <button className="btn btn-default" onClick={this.localHandleClick}>+ {this.props.increment}</button>
         );
@@ -14,6 +16,7 @@ var Button = React.createClass({
 var Result = React.createClass({
     render: function () {
         return (
+            //access to property counter
             <span>{this.props.localCounter}</span>
         );
     }
