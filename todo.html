@@ -14,44 +14,32 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.4/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" />
 
   <!--build:css css/styles.min.css-->
+  <link href="css/styles.css" rel="stylesheet" />
   <!--endbuild-->
-  <style type="text/css">
-    #app {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      -webkit-transform: translate(-50%, -50%);
-      -moz-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-      -o-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
-    }
-    
-    button {
-      margin: 0 0.5em;
-    }
-    
-    span {
-      padding-left: 1em;
-    }
-  </style>
+
 </head>
 
 <body>
 
   <div id="app">
+      <div class="input-group"><input type="text" class="form-control"><button class="input-group-addon">Add task</button></div>
+      <ul class="task-list">
+        <li class="task-item">
+          <!-- react-text: 11 -->Trung
+          <span class="fa fa-trash-o task-remove pull-right"></span><span class="fa fa-check-square-o task-complete pull-right"></span></li>
+      </ul>
   </div>
 
   <script src="https://fb.me/react-15.1.0.js"></script>
 
   <script src="https://fb.me/react-dom-15.1.0.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.min.js"></script>
-  <script type="text/babel" src="js/script.js"></script>
+  <script type="text/babel" src="js/main.js"></script>
   <!-- endbuild -->
 </body>
 
