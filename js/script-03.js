@@ -24,14 +24,45 @@ var Card = React.createClass({
     }
 })
 
-var Main = React.createClass({
+var Form = React.createClass({
+    handleSubmit: function (e) {
+        e.preventDefault();
+        var loginInput = this.refs.login;
+        this.props.addCard(loginInput.value);
+        loginInput = '';
+    },
     render: function () {
         return (
-            <div className="container">
-                <div className="row">
-                    <Card login="trungk18" />
-                    <Card login="juliangarnier" />
-                </div>
+            <div className="col-md-12">
+                <form className="form-inline" onSubmit={this.handleSubmit}>
+                    <div className="form-group">
+                        <label for="userName">Username</label>
+                        <input type="text" className="form-control" id="userName" placeholder="trungk18" ref="login"></input>
+                    </div>
+                    <button type="submit" className="btn btn-primary">Add</button>
+                </form>
+            </div>
+        )
+    }
+});
+
+var Main = React.createClass({
+    getInitialState: function () {
+        return {
+            logins: ['trungk18']
+        }
+    },
+    addCard: function (input) {
+        this.setState({ logins: this.state.logins.concat(input) });
+    },
+    render: function () {
+        var cards = this.state.logins.map(function (login) {
+            return (<Card login={login} />)
+        });
+        return (
+            <div className="row">
+                <Form addCard={this.addCard} />
+                {cards}
             </div>
         )
     }

@@ -22,14 +22,41 @@
   <!--build:css css/styles.min.css-->
   <!--endbuild-->
   <style type="text/css">
-    form {
-      margin: 1.5em 0;
+    .star-frame i {
+      margin: 0.5em;
+      font-size: 1.5em;
     }
-    label { 
-      padding-right: 0.5em;
+    
+    .answer-frame,
+    .star-frame {
+      height: 10em;
     }
-    button {
-      margin-left: 0.5em;
+    
+    .button-frame {
+      line-height: 10em;
+    }
+    
+    .button-frame > button {
+      font-size: 2em;
+    }
+    
+    .number {
+      display: inline-block;
+      margin: 0.5em;
+      background: #bbb;
+      text-align: center;
+      width: 2em;
+      height: 2em;
+      line-height: 2em;
+      font-size: 1.5em;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    
+    .number.selected {
+      background: #e8e8e8;
+      color: #ddd;
+      cursor: not-allowed;
     }
   </style>
 </head>
@@ -47,7 +74,7 @@
   <script src="https://fb.me/react-15.1.0.js"></script>
   <script src="https://fb.me/react-dom-15.1.0.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.min.js"></script>
-  <script type="text/babel" src="js/script-03.js"></script>
+  <script type="text/babel" src="js/script-04.js"></script>
   <!-- endbuild -->
 </body>
 
